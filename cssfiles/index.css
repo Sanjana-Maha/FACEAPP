@@ -1,0 +1,344 @@
+
+body{
+    margin: 0px;
+    padding: 0px;
+    /* display: grid;
+    grid-template-areas: "header header header header header header"
+                         "leftmenusec postsec postsec postsec postcommentsec postcommentsec"
+                         "footersec footersec footersec footersec footersec footersec"; */
+    font-family: sans-serif;
+    background-image: url("../images/pexels-stephan-seeber-1261728.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+#header{
+    grid-area: header;
+}
+#middlesection{
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+}
+
+
+#Usereprofilesection{
+    padding: 20px;
+}
+.usericon img {
+    vertical-align: middle;
+    border-style: none;
+    width: 100%;
+    padding: 20px;
+    filter: invert(1);
+}
+.usericon {
+    font-size: 150px;
+    text-align: center;
+    color: white;
+}
+div#leftmenubuttons {
+    DISPLAY: FLEX;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+/* #userprofilediv{
+    background-image: url('../images/pexels-sergio-souza-2120005.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+#leftmenubuttons button {
+    padding: 7px;
+    margin: 10px 0px;
+    border-radius: 12px;
+    color: black;
+    background: white;
+    border: none;
+    font-weight: 700;
+    box-shadow: 2px 2px 5px;
+}
+.createduserdetailsdiv {
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: smaller;
+}
+#postsec{
+    /* background-color: limegreen; */
+    padding: 10px 5px;
+}
+
+#addpost {
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #673ab7;
+    background: #673ab7;
+    color: white;
+    font-size: larger;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+#postuploadsec{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+#postdisplay{
+    /* background-color: antiquewhite; */
+    flex-direction: column;
+}
+#backbtn:hover{
+    background-color: white;
+    color: #673ab7;
+    font-weight: 700;
+    border: 3px solid #673ab7;
+}
+button#backbtn {
+    text-align: center;
+    border: 3px solid #607d8b;
+    color: white;
+    background: #607d8b;
+    box-shadow: 3px 3px 5px black;
+    border-radius: 7px;
+}
+.postdisplayinp{
+    display: block;
+    width: 100%;
+}
+#posttext{
+    padding: 10px;
+    outline: none;
+}
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Select some files';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    /* -webkit-user-select: none; */
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+#postuploadfile{
+    display: none;
+}
+#labelforaddfile{
+    height: 400px;
+    display: block;
+    padding: 2px;
+    text-align: center;
+    border: 2px solid black;
+    background-color: white;
+    padding-top: 150px;
+    margin: 0px;
+}
+.picviewdisplay{
+    /* height: 400px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200px ;
+    border: 2px solid;
+}
+.picviewdisplay img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+#discriptionofpost{
+    display: block;
+    width: 100%;
+    outline: none;
+}
+button#postbtn {
+    display: block;
+    width: 100%;
+    background: #673ab7;
+    color: white;
+    font-size: larger;
+    font-weight: 700;
+}
+/* uploaded post sec */
+.newpostdiv {
+    box-shadow: 1px 1px 10px;
+    padding: 10px 0px;
+    margin: 30px 0px;
+    border-radius: 8px;
+    border-top: 10px solid #673ab7;
+    background-color: white;
+    border-bottom: 10px solid #673ab7;
+}
+.addcommentclass {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 70% 25%;
+    text-align: center;
+    grid-gap: 2%;
+}
+input.commentinp {
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: #ebebeb;
+    padding: 10px;
+} 
+.addcommentbtn:hover{
+    background-color: #673ab7;
+    color: white;
+    transition-duration: 400ms;
+}
+button.addcommentbtn {
+    border-radius: 20px;
+    border-top: 4px solid #673ab7;
+    border-left: none;
+    color: #673ab7;
+    font-weight: 600;
+    font-size: large;
+    border-right: none;
+    border-bottom: none;
+}
+.addcommentclass {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 70% 25%;
+    text-align: center;
+    grid-gap: 2%;
+}
+input.commentinp {
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    background: #ebebeb;
+    padding: 10px;
+}
+button.btn.btn-link.btn-block.text-left {
+    color: black;
+    text-decoration: none;
+}
+.userdetails {
+    color: #673ab7;
+    font-weight: 700;
+    font-size: larger;
+    padding: 15px;
+}
+.posttitle {
+    padding: 5px;
+}
+
+.postdiscription {
+    padding: 5px;
+}
+
+/* .postimagesec {
+    height: 440px;
+} */
+
+.postimagesec img {
+    width: 100%;
+}
+.commentsec{
+    display: block;
+}
+.commentbox {
+    display: flex;
+    padding: 10px;
+}
+.commentusericon {
+    font-size: xx-large;
+    padding: 10px;
+}
+.commentvalue {
+    background: #dddddd;
+    padding: 10px 20px;
+    border-radius: 38px;
+    width: 100%;
+}
+#allusersection{
+  padding: 20px;
+}
+#allusersection h2 {
+    text-align: center;
+    color: black;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 100;
+}
+
+.singleuserdevi {
+    padding: 10px;
+    margin: 10px 0px;
+    background: white;
+    border-radius: 7px;
+}
+#footersec{
+    background-color: black;
+    height: 100px;
+    grid-area: footersec;
+}
+@media only screen and (max-width: 1000px) {
+    #middlesection{
+        display: block;
+    }
+    .usericon{
+        font-size: small;
+    }
+    .usericon img{
+        width: 50%;
+    }
+    #userdetailsdiv{
+        font-size: smaller;
+    }
+    #Usereprofilesection {
+        padding: 2px;
+    }
+    div#leftmenubuttons{
+        display: none;
+    }
+    .newpostdiv{
+        font-size: smaller;
+    }
+    .addcommentclass{
+        padding: 5px 2px;
+    }
+    input.commentinp{
+        border-radius: 10px;
+    }
+    button.addcommentbtn {
+        font-size: small;
+        border-radius: 10px;
+    }
+    .card-body{
+        padding: 2px;
+    }
+    .commentbox {
+        display: flex;
+        padding: 5px;
+    }
+    .commentvalue {
+        background: #dddddd;
+        padding: 10px 15px;
+        border-radius: 20px;
+        width: 100%;
+    }
+    .cardbodyforcomment{
+        padding: 2px;
+    }
+  }

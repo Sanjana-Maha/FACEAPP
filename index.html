@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We are in Home page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/81d79813c8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="cssfiles/index.css">
+</head>
+<body>
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark "  style="background-color: #673ab7;">
+            <a class="navbar-brand" href="#">FACEAPP</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sign-up.html">SIGN IN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="log-in.html">LOG OUT</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchinp" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" id="searchbtn">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div id="middlesection">
+        <div id="Usereprofilesection">
+            <div id="userprofilediv">
+                <div class="usericon">
+                    <!-- <i class="fa fa-user-circle" aria-hidden="true"></i> -->
+                    <img src="images/user.png" alt="">
+                </div>
+                <div id="userdetailsdiv"></div>
+            </div>
+            <div id="leftmenubuttons">
+                <button id="leftaddpost">Add post
+                    <i class="fa-solid fa-circle-plus"></i></button>
+                <button id="leftlogoutbtn">LOG OUT <i class="fa-solid fa-right-from-bracket"></i></button>
+            </div>
+        </div>
+        <div id="postsec">
+            <div id="addpost">
+                <strong>Add post</strong>
+                <i class="fa-solid fa-circle-plus"></i>
+            </div>    
+            <div id="postuploadsec">
+
+                <div id="postdisplay">
+                    <button id="backbtn"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+                    <h2>
+                        Add new post
+                    </h2>
+                    <input type="text" name="" id="posttext" placeholder="Add title" class="postdisplayinp">
+                    <input type="file" class="custom-file-input" id="postuploadfile" accept="image/jpg image/jpeg">
+                    <div id="picviewsec" ></div>         
+                    <label for="postuploadfile" id="labelforaddfile">
+                        Add Images/videos <i class="fa-solid fa-image"></i>
+                        <h2>Click to select file</h2>
+                    </label>
+                    <textarea name="discription" id="discriptionofpost" cols="30" rows="2"
+                        placeholder="Add discription...."></textarea>
+                        <button id="postbtn">Post</button>
+                </div>
+                
+            </div>
+            <div id="displaypostsection"></div>
+        </div>
+        <div id="allusersection">
+            <h2>All users</h2>
+        </div>
+    </div>
+    <div class="table"></div>
+    <!-- <div id="footersec"></div> -->
+  
+    <script type="module" src="jsfile/index.js"></script>
+    
+</body>
+
+</html>

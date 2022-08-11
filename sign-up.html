@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign in page</title>
+        <!-- <script src="jsfile/sign-up.js"></script> -->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Baloo+Da+2:wght@500&family=Cantarell&family=Merienda&display=swap');
+            
+        @media only screen and (max-width: 800px) {
+            body {
+                background: black;
+            }
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: url(images/simplebg.png);
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+            font-family: 'Averia Sans Libre', cursive;
+        }
+
+        div#signupsec {
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100%;
+            margin: 40px auto;
+            /* margin-top: 150px; */
+            padding: 25px;
+            grid-gap: 25px;
+            text-align: center;
+            background-color: #ffffffd6;
+            border-radius: 15px;
+            box-shadow: black 2px 2px 5px;
+        }
+
+        #firstnamediv {
+            display: grid;
+            text-align: left;
+            grid-gap: 10px;
+        }
+        
+        #lastnamediv {
+            display: grid;
+            text-align: left;
+            grid-gap: 10px;
+        }
+
+        #emaildiv {
+            display: grid;
+            text-align: left;
+            grid-gap: 10px;
+        }
+
+        #genderdiv {
+            display: grid;
+            text-align: left;
+            grid-template-columns: 100px 180px;
+            grid-gap: 10px;
+        }
+        #genderdiv label{
+            font-size: 18px;
+        }
+
+        #usernamediv {
+            display: grid;
+            text-align: left;
+            grid-gap: 10px;
+        }
+        
+        #passworddiv {
+            display: grid;
+            text-align: left;
+            grid-gap: 10px;
+
+        }
+
+        input#firstnameinp {
+            padding: 8px;
+            font-size: 20px;
+            border: 1px solid rgba(138, 135, 135, 0.582);
+            border-radius: 5px;
+            outline: none;
+            
+        }
+        
+        input#lastnameinp {
+            padding: 8px;
+            font-size: 20px;
+            border: 1px solid rgba(138, 135, 135, 0.582);
+            border-radius: 5px;
+            outline: none;
+
+        }
+        
+        input#emailinp {
+            padding: 8px;
+            font-size: 20px;
+            border: 1px solid rgba(138, 135, 135, 0.582);
+            border-radius: 5px;
+            outline: none;
+            
+        }
+        
+        input#usernameinp {
+            padding: 8px;
+            font-size: 20px;
+            border: 1px solid rgba(138, 135, 135, 0.582);
+            border-radius: 5px;
+            outline: none;
+            
+        }
+        
+        input#passwordinp {
+            padding: 8px;
+            font-size: 20px;
+            border: 1px solid rgba(138, 135, 135, 0.582);
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        label {
+            font-size: 20px;
+            /* font-weight: bold; */
+            color: rgb(121, 119, 119);
+        }
+        .genderlabel{
+            text-align: left;
+        }
+        hr {
+            width: 100%;
+            opacity: 0.7;
+        }
+        /* #butttons {
+            
+        } */
+        #newaccountbtn:hover{
+            background-color: white;
+            color: #3f51b5;
+        }
+        button#newaccountbtn {
+            padding: 10px;
+            font-size: large;
+            font-weight: 700;
+            background: #3f51b5;
+            letter-spacing: 2px;
+            color: white;
+            border: 1px solid #bbb9b9;
+            border-radius: 7px;
+            outline: none;
+        }
+        .alertmessage{
+            color: red;
+            position: absolute;
+            text-align: center;
+            margin: 75px 1px;
+        }
+        
+        </style>
+</head>
+
+<body>
+    <div id="container">
+        <form action="/signup" method="post">
+            <div id="signupsec">
+                <div id="logo">
+                    WEBNAME
+                </div>
+                <div id="firstnamediv">
+                    <label for="firstnameinp">First name</label>
+                    <input type="text" name="firstname" id="firstnameinp">
+                    <strong id="firstnamemessage" class="alertmessage"></strong>
+
+                </div>
+                <div id="firstnamediv">
+                    <label for="lastnameinp">Last name</label>
+                    <input type="text" name="lastname" id="lastnameinp">
+                    <strong id="lastnamemessage" class="alertmessage"></strong>
+
+                </div>
+                <div id="emaildiv">
+                    <label for="emailinp">Email ID</label>
+                    <input type="email" name="email" id="emailinp">
+                    <strong id="useremailmessage" class="alertmessage"></strong>
+                </div>
+                <hr>
+                <!-- <label for="genderinp" class="genderlabel">Select your gender</label> -->
+                <!-- <div id="genderdiv">
+                    <label for="maleinp">Male</label>
+                    <input type="radio" name="gender" id="maleinp" value="male">
+                    <label for="maleinp">Female</label>
+                    <input type="radio" name="gender" id="femaleinp" value="female">
+                </div> -->
+                <!-- <hr> -->
+                <div id="usernamediv">
+                    <label for="usernameinp">Username</label>
+                    <input type="text" name="username" id="usernameinp">
+                    <strong id="usernamemessage" class="alertmessage"></strong>
+
+                </div>
+                <div id="passworddiv">
+                    <label for="passwordinp">Create new password</label>
+                    <input type="password" name="password" id="passwordinp">
+                    <strong id="passwordmessage" class="alertmessage"></strong>
+
+                </div>
+                <div id="sign-uppage">
+                    <a href="log-in.html">Already have an account LOG IN ?</a>
+                </div>
+                <div id="butttons">
+                    <button  type="submit"  id="newaccountbtn">Create account</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- <script src="jsfile/newclientside.js"></script> -->
+    <script src="jsfile/sign-up.js"></script>
+</body>
+
+</html>

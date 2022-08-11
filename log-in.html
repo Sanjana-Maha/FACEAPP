@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in page</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("u5RlzSLiMwr1F63BT");
+        })();
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@300&family=Baloo+Da+2:wght@500&family=Cantarell&family=Merienda&display=swap');
+
+        @media only screen and (max-width: 800px) {
+            body {
+                background: black;
+            }
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            height: 100vh;
+            background: url(images/simplebg.png);
+            background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+            font-family: 'Averia Sans Libre', cursive;
+        }
+
+        #container {
+            padding-top: 100px;
+        }
+
+        div#loginsec {
+            width: 400px;
+            display: grid;
+            grid-template-columns: 100%;
+            margin: 0px auto;
+            /* margin-top: 150px; */
+            padding: 25px;
+            grid-gap: 25px;
+            text-align: center;
+            background-color: #ffffffd6;
+            border-radius: 15px;
+            box-shadow: black 2px 2px 5px;
+        }
+
+        #forgotsec {
+            display: none;
+            width: 400px;
+            /* display: grid; */
+            grid-template-columns: 100%;
+            margin: 0px auto;
+            /* margin-top: 150px; */
+            padding: 25px;
+            grid-gap: 25px;
+            text-align: center;
+            background-color: #ffffffd6;
+            border-radius: 15px;
+            box-shadow: black 2px 2px 5px;
+        }
+
+        #usernamediv {
+            display: grid;
+            text-align: left;
+            grid-gap: 10px;
+        }
+
+        #passworddiv {
+            display: grid;
+            text-align: left;
+            grid-gap: 10px;
+
+        }
+
+        input#usernameinp {
+            padding: 8px;
+            font-size: 20px;
+            border: 1px solid rgba(138, 135, 135, 0.582);
+            border-radius: 5px;
+            outline: none;
+
+        }
+
+        input#passwordinp {
+            padding: 8px;
+            font-size: 20px;
+            border: 1px solid rgba(138, 135, 135, 0.582);
+            border-radius: 5px;
+            outline: none;
+        }
+
+        label {
+            font-size: 20px;
+            /* font-weight: bold; */
+            color: rgb(121, 119, 119);
+        }
+
+        #butttons {
+            display: grid;
+            grid-template-columns: 180px 180px;
+            grid-gap: 40px;
+        }
+
+        #loginbtn:hover {
+            background-color: white;
+            color: #3f51b5;
+        }
+
+        #signupbtn:hover {
+            background-color: white;
+            color: #3f51b5;
+        }
+
+        button#loginbtn {
+            padding: 10px;
+            font-size: large;
+            font-weight: 700;
+            background: #3f51b5;
+            letter-spacing: 2px;
+            color: white;
+            border: 1px solid #bbb9b9;
+            border-radius: 7px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #signupbtn {
+            /* width: 100%; */
+            padding: 10px;
+            font-size: large;
+            font-weight: 700;
+            background: #3f51b5;
+            letter-spacing: 2px;
+            color: white;
+            border: 1px solid #bbb9b9;
+            border-radius: 7px;
+            font-family: sans-serif;
+            outline: none;
+            text-decoration: none;
+        }
+
+        #forgotbtn:hover {
+            background-color: white;
+            color: #3f51b5;
+            cursor: pointer;
+        }
+
+        #forgotbtn {
+            /* width: 100%; */
+            padding: 10px;
+            font-size: large;
+            font-weight: 700;
+            background: #3f51b5;
+            letter-spacing: 2px;
+            color: white;
+            border: 1px solid #bbb9b9;
+            border-radius: 7px;
+            font-family: sans-serif;
+            outline: none;
+            text-decoration: none;
+        }
+
+        #loginsec a {
+            display: block;
+        }
+
+        #invalidmessage {
+            color: red;
+            display: none;
+            position: absolute;
+            text-align: center;
+            margin: 20px 100px;
+
+        }
+
+        .alertmessage {
+            color: red;
+            position: absolute;
+            text-align: center;
+            margin: 75px 1px;
+        }
+
+        input#forgotemailinp {
+            padding: 8px;
+            font-size: 20px;
+            border: 1px solid rgba(138, 135, 135, 0.582);
+            border-radius: 5px;
+            outline: none;
+        }
+        /* #forgotemaildiv{
+            display: flex;
+            flex-direction:column;
+        } */
+        #forgotemaildiv {
+            display: grid;
+            text-align: left;
+            grid-gap: 10px;
+
+        }
+        #forgotemailalertmessage{
+            /* margin-top: 100px; */
+            text-align: left;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form action="/signup" method="post">
+            <div id="loginsec">
+                <div id="logo">
+                    WEBNAME
+                </div>
+                <div id="invalidmessage" class="alertmessage">
+                    <strong>Invalid username or password</strong>
+                </div>
+                <div id="usernamediv">
+                    <label for="usernameinp">Username</label>
+                    <input type="text" name="username" id="usernameinp">
+                    <strong id="usernamemessage" class="alertmessage"></strong>
+                </div>
+                <div id="passworddiv">
+                    <label for="passwordinp">Password</label>
+                    <input type="password" name="password" id="passwordinp">
+                    <strong id="passwordmessage" class="alertmessage"></strong>
+                </div>
+                <div id="forgottenPassword">
+                    <a href="#" onclick="forgotpassword()">Forgotten password ?</a>
+                </div>
+                <div id="butttons">
+                    <button type="submit" id="loginbtn">LOG IN</button>
+                    <a href="sign-up.html" id="signupbtn">
+                        SIGN UP
+                        <!-- <button  id="signupbtn">SIGN UP</button> -->
+                    </a>
+                </div>
+            </div>
+        </form>
+        <div id="forgotsec">
+            <strong style="text-align: left; cursor: pointer;" id="back">&ltback</strong>
+            <div id="forgotemaildiv">
+                <label for="forgotemailinpt">Write your email which is linked with to your account.</label>
+                <input type="email" id="forgotemailinp" placeholder=" example@xyz.com">
+                <strong id="forgotemailalertmessage" ></strong>
+            </div>
+            
+            <button id="forgotbtn">SEND</button>
+        </div>
+    </div>
+</body>
+<script src="jsfile/log-in.js"></script>
+
+</html>
