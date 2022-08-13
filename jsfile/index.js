@@ -134,14 +134,19 @@ function addcomment() {
                         console.log(timeforoffensivecomment)
                         window.sessionStorage.setItem('timetakencomm', JSON.stringify(timeforoffensivecomment))
                         offensive = true
-                        element.previousElementSibling.value = "This comment has already been detected as offensive"
+                        element.previousElementSibling.value = "Following comment identified as an OFFENSIVE, user cannot proceed to post."
                         element.previousElementSibling.style.border = "2px solid red"
                         setTimeout(() => {
                             element.previousElementSibling.style.border = "none"
                             element.previousElementSibling.value = ""
-                        }, 2500);
+                        }, 3500);
                     }
                     else if (badwords.includes(wordelem) == true) {
+                        if (confirm("Offesnsive Language Identified are you sure you want to proceed?")) {
+                             offensive = false
+                         } else {
+                             offensive=true
+                         }
                         const dafter = new Date();
                         let timeafter = dafter.getTime()
                         // console.log(timeafter)
@@ -149,14 +154,14 @@ function addcomment() {
                         console.log(timeforoffensivecomment)
                         window.sessionStorage.setItem('timetakencomm', JSON.stringify(timeforoffensivecomment))
                         // alert('used offensive message')
-                        offensive = true
-                        element.previousElementSibling.value = "Failed to post: Offensive comment detected"
+                       
+//                         element.previousElementSibling.value = "Offesnsive Language Identified are you sure you want to proceed?"
 
-                        element.previousElementSibling.style.border = "2px solid red"
-                        setTimeout(() => {
-                            element.previousElementSibling.style.border = "none"
-                            element.previousElementSibling.value = ""
-                        }, 2500);
+//                         element.previousElementSibling.style.border = "2px solid red"
+//                         setTimeout(() => {
+//                             element.previousElementSibling.style.border = "none"
+//                             element.previousElementSibling.value = ""
+//                         }, 2500);
                     }
                 });
 
